@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="User_Interface.User_Interface_Controller">
+   <children>
+      <GridPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" prefWidth="800.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints />
+          <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+            <RowConstraints prefHeight="550.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TabPane prefHeight="550.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="2">
+              <tabs>
+                <Tab text="User Information">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane prefHeight="331.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" prefWidth="350.0" />
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="450.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="10.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="440.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="10.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                                          <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                        <RowConstraints prefHeight="400.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <ImageView fx:id="imageView" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                          <GridPane prefHeight="61.0" prefWidth="300.0" GridPane.columnIndex="1">
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                          </GridPane>
+                                          <Button fx:id="uploadImageButton" mnemonicParsing="false" onAction="#uploadImage" prefHeight="30.0" prefWidth="110.0" scaleX="2.0" scaleY="2.0" text="Upload Image" GridPane.columnIndex="1" />
+                                          <Label text="Note* Please upload a clear image of your vaccine card" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" prefWidth="350.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints prefHeight="110.0" vgrow="SOMETIMES" />
+                                        <RowConstraints prefHeight="110.0" vgrow="SOMETIMES" />
+                                        <RowConstraints prefHeight="110.0" vgrow="SOMETIMES" />
+                                          <RowConstraints prefHeight="110.0" vgrow="SOMETIMES" />
+                                          <RowConstraints prefHeight="110.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="usernameInfo" text="Username: " translateX="10.0">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="nameLabel" text="Name: " translateX="10.0" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="DOBLabel" text="Date of Birth: " translateX="10.0" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="emailLabel" text="Email: " translateX="10.0" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <GridPane GridPane.rowIndex="4">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <TextField fx:id="passwordText" prefHeight="30.0" prefWidth="175.0" promptText="New Password" translateX="10.0">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Button fx:id="passwordButton" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="125.0" text="Change Password" translateX="5.0" GridPane.columnIndex="1">
+                                                   <font>
+                                                      <Font size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Venues">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="-58.0" layoutY="146.0" prefHeight="331.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <columnConstraints>
+                                          <ColumnConstraints />
+                                          <ColumnConstraints />
+                                       </columnConstraints>
+                                       <children>
+                                          <GridPane prefHeight="331.0" prefWidth="458.0" GridPane.columnIndex="1">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="350.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                              <RowConstraints prefHeight="450.0" vgrow="SOMETIMES" />
+                                                <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label scaleX="2.0" scaleY="2.0" text="Venues Available: " />
+                                                <TableView fx:id="requestTable" onMouseClicked="#getVenueData" prefHeight="439.0" prefWidth="999.0" GridPane.rowIndex="1">
+                                                   <columns>
+                                                      <TableColumn fx:id="column1" prefWidth="399.0" text="Venue Names: " />
+                                                   </columns>
+                                                </TableView>
+                                                <Button fx:id="requestButton" mnemonicParsing="false" onAction="#requestAccess" prefHeight="26.0" prefWidth="261.0" text="Request Access: " GridPane.rowIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="450.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="105.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                        <RowConstraints prefHeight="450.0" vgrow="SOMETIMES" />
+                                          <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TextArea fx:id="venueText" editable="false" prefHeight="535.0" prefWidth="400.0" GridPane.rowIndex="1" />
+                                          <Label scaleX="2.0" scaleY="2.0" text="Venue Information: " />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Approved">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="-8.0" layoutY="121.0" prefHeight="331.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane>
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="350.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                        <RowConstraints prefHeight="450.0" vgrow="SOMETIMES" />
+                                          <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <TableView fx:id="approvedTable" onMouseClicked="#getApprovedData" prefHeight="259.0" prefWidth="300.0" GridPane.rowIndex="1">
+                                            <columns>
+                                              <TableColumn fx:id="column2" prefWidth="399.0" text="Venue Names: " />
+                                            </columns>
+                                          </TableView>
+                                          <Label scaleX="2.0" scaleY="2.0" text="Approved Venues: " />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="450.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                        <RowConstraints prefHeight="450.0" vgrow="SOMETIMES" />
+                                          <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label scaleX="2.0" scaleY="2.0" text="Venue Information: " />
+                                          <TextArea fx:id="approvedText" editable="false" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <GridPane GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="500.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="150.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="150.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshAll" prefHeight="30.0" prefWidth="100.0" text="Refresh" GridPane.columnIndex="1" />
+                  <Label fx:id="username" prefHeight="30.0" prefWidth="160.0" text="Logged in as: " translateX="10.0" />
+                  <Button fx:id="logout" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="100.0" text="Logout" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
