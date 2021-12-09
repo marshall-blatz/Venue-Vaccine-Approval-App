@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Venue_Login.Venue_Login_Controller">
+   <children>
+      <GridPane alignment="CENTER_LEFT" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints prefHeight="200.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints prefHeight="355.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane alignment="CENTER" prefHeight="225.0" prefWidth="600.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane GridPane.columnIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="25.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="350.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="25.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="55.0" valignment="CENTER" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField fx:id="usernameSignup" prefHeight="30.0" prefWidth="350.0" promptText="Username" GridPane.columnIndex="1" />
+                        <TextField fx:id="passwordSignup" prefHeight="30.0" prefWidth="350.0" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="passwordVerify" prefHeight="30.0" prefWidth="350.0" promptText="Re-enter Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="orgName" prefHeight="30.0" prefWidth="350.0" promptText="Organization Name" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="email" prefHeight="30.0" prefWidth="350.0" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#venueSignup" prefHeight="40.0" prefWidth="130.0" text="Sign Up" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="25.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="350.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="25.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints prefHeight="55.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints prefHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="usernameLogin" prefHeight="30.0" prefWidth="350.0" promptText="Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button mnemonicParsing="false" onAction="#venueLogin" prefHeight="40.0" prefWidth="130.0" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <PasswordField fx:id="passwordLogin" maxWidth="350.0" prefHeight="30.0" prefWidth="350.0" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="errorLabel" textFill="RED" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Label prefHeight="100.0" prefWidth="300.0" text="Login/Sign-up" GridPane.rowIndex="1">
+               <font>
+                  <Font size="40.0" />
+               </font></Label>
+            <GridPane prefHeight="40.0" prefWidth="835.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" prefWidth="650.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" prefWidth="150.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="95.0" text="Back" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
